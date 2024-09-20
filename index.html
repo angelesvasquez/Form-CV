@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styleForm.css">
+</head>
+<body>
+    <form method = "POST" action= "CV.php" >
+        <h1>FORMULARIO</h1>
+        <div class = "caja">
+            <div class= "cuadro_text">
+                <label for="nombre">Nombre y apellidos </label><br>
+                    <input type="text" name = "nombre">
+            </div>
+            <div class= "cuadro_text">
+                <label for="fecha"> Fecha de nacimiento </label><br>
+                <input type="date" name = "fecha">
+            </div>
+            <div class= "cuadro_text">
+                <label for="ocupacion">Ocupación</label><br>
+                <input type="text" name = "ocupacion">
+            </div>
+            <div class= "cuadro_text">
+                  <label for="telefono">Teléfono</label><br>
+                <input type="tel" name = "telefono">
+            </div>  
+            <div class= "cuadro_text">
+                <label for="email">Correo</label><br>
+                <input type="email" name = "email">
+            </div>
+            <div class= "cuadro_text">         
+                <label>Nacionalidad: </label><br>
+                <select name="nacionalidad" size="4">
+                    <option value="Brasil">Brasil</option>
+                    <option value="Perú">Perú</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="China">China</option>
+                    <option value="Rusia">Rusia</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Japón">Japón</option>
+                </select>
+            </div>
+            <div class= "cuadro_option">         
+                <legend>Nivel de inglés:</legend>     
+                <label for="bas">
+                <input type="radio" id="bas" name = "nivel_ingles" value = "Básico"> Básico</label><br>
+                <label for="inter">
+                <input type="radio" id="inter" name = "nivel_ingles" value = "Intermedio"> Intermedio</label><br>
+                <label for="avan">
+                <input type="radio" id="avan" name = "nivel_ingles" value = "Avanzado"> Avanzado</label><br>
+            </div>
+            <div class= "cuadro_text">         
+                <label for="lenguajes">Lenguajes de programación: </label><br>
+                <select id="lenguajes" name="lenguajes[]" size="4" multiple>
+                    <option value="C++">C++</option>
+                    <option value="C">C</option>
+                    <option value="C#">C#</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="SQL">SQL</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                </select>
+            </div>
+            <div class= "cuadro_list">    
+                <label>Aptitud:</label><br>
+                <input list="aptitud" name="aptitudes" id="aptitudes">
+                <datalist id="aptitud">
+                    <option value="Trabajo en equipo">
+                    <option value="Pensamiento Analítico">
+                    <option value="Innovación y creatividad">
+                    <option value="Adaptabilidad">
+                    <option value="Inteligencia emocional">
+                    <option value="Comunicación efectiva">
+                </datalist>
+            </div>
+            <div class= "cuadro_option">    
+                <legend>Habilidades:</legend>
+                <input type="checkbox" name="habilidades[]" id="C++" value="Programación en C++">
+                <label for="C++">Programación en C++</label><br>
+                <input type="checkbox" name="habilidades[]" id="WEB" value="Desarrollo web">
+                <label for="WEB">Desarrollo web</label><br>
+                <input type="checkbox" name="habilidades[]" id="ML" value="Machine Learning">
+                <label for="ML">Machine Learning</label><br>
+                <input type="checkbox" name="habilidades[]" id="DBD" value="Diseño de bases de datos">
+                <label for="DBD">Diseño de bases de datos</label><br>
+                <input type="checkbox" name="habilidades[]" id="SI" value="Seguridad Informática">
+                <label for="SI">Seguridad Informática</label><br>
+            </div>
+            <div class= "cuadro_text">
+                <label for="perfil">Perfil</label><br>
+                <textarea  name = "perfil" rows="5" ></textarea><br>
+            </div>           
+            <div class= "cuadro_send"> 
+                <input name= "enviar" type="submit" class= "enviar" value = "Enviar">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
